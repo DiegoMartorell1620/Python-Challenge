@@ -1,6 +1,7 @@
 import os
 import csv
 
+# Defining the path where the file whose information we are going to use is stored
 election_csv = os.path.join('C:/Users/diego/Python-Challenge/PyPoll','Resources','election_data.csv')
 
 #Total numbers of votes cast
@@ -63,6 +64,7 @@ print(f"Raymon Anthony Doane:{percentage_raymon}% ({sum_Raymon_Anthony_Doane})")
 print(f"-----------------------------------")
 print(f"Winner: {winner}")
 
+#Exporting the information to a text file
 output_path = os.path.join('C:/Users/diego/Python-Challenge/PyPoll', "Analysis", "analysis.txt")
 with open(output_path, 'w') as file:
     file.write(f"Election Results\n")
