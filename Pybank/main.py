@@ -1,9 +1,10 @@
 import os
 import csv
 
+# Defining the path where the file whose information we are going to use is stored
 budget_csv = os.path.join('C:/Users/diego/Python-Challenge/PyBank','Resources','budget_data.csv')
 
-#The total number of months included in the dataset
+#Calculating the total number of months included in the dataset
 
 def months_count(csv_file):
     total_month_count = 0
@@ -40,7 +41,8 @@ def profit_losses(csv_file):
 total_amount = profit_losses(budget_csv)
 print(f"Total: ${total_amount}")
 
-#The changes in "Profit/Losses" over the entire period, and then the average of those changes
+#The changes in "Profit/Losses" over the entire period, and then the average of those changes. Additionally, in this section
+# the greatest increase in profits and the greatest decrease in profits are calculated (Date and amount)
 def changes_profit_losses(csv_file):
     total_changes_profit_losses = 0
     total_months = 0
@@ -78,6 +80,7 @@ print(f"Average Change: ${average_change}")
 print(f"Greatest Increase in profits: {greatest_increase_date} (${max(changes_list)})")
 print(f"Greatest Decrease in profits: {greatest_decrease_date} (${min(changes_list)})")
 
+#Exporting the information to a text file
 output_path = os.path.join('C:/Users/diego/Python-Challenge/PyBank', "Analysis", "analysis.txt")
 with open(output_path, 'w') as file:
     file.write(f"Financial Analysis\n")
