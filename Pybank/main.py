@@ -2,7 +2,7 @@ import os
 import csv
 
 # Defining the path where the file whose information we are going to use is stored
-budget_csv = os.path.join('C:/Users/diego/Python-Challenge/PyBank','Resources','budget_data.csv')
+budget_csv = os.path.join('Resources','budget_data.csv')
 
 #Calculating the total number of months included in the dataset
 
@@ -81,7 +81,7 @@ print(f"Greatest Increase in profits: {greatest_increase_date} (${max(changes_li
 print(f"Greatest Decrease in profits: {greatest_decrease_date} (${min(changes_list)})")
 
 #Exporting the information to a text file
-output_path = os.path.join('C:/Users/diego/Python-Challenge/PyBank', "Analysis", "analysis.txt")
+output_path = os.path.join('Analysis','analysis.txt')
 with open(output_path, 'w') as file:
     file.write(f"Financial Analysis\n")
     file.write(f"-----------------------\n")
