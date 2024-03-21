@@ -6,9 +6,10 @@ Lines 5-21
 This specific structure of how to create a function that goes through all the rows of a csv file and gives as a result one total value was provided by 
 the Xpert Learning Assistant
 
-budget_csv = os.path.join('C:/Users/diego/Python-Challenge/PyBank','Resources','budget_data.csv')
 
-"def months_count(csv_file):
+budget_csv = os.path.join('Resources','budget_data.csv')
+
+def months_count(csv_file):
     total_month_count = 0
     
     with open(csv_file, 'r') as csvfile:
@@ -28,7 +29,8 @@ Lines 84-92
 
 This specific code ("File.write") for exporting my results to a txtfile was provided by the Xpert Learning Assistant
 
-output_path = os.path.join('C:/Users/diego/Python-Challenge/PyBank', "Analysis", "analysis.txt")
+output_path = os.path.join('Analysis','analysis.txt')
+
 with open(output_path, 'w') as file:
     file.write(f"Financial Analysis\n")
     file.write(f"-----------------------\n")
